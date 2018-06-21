@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h3>Workers list</h3>
+    <% @workers.each do |worker| %>
+     <p> <%= worker.name %> </p>
+     <%= link_to "Edit this worker", edit_worker_path(worker) %>
+     <br><br>
+    <% end %>
+
+    <%= link_to "Add a worker", new_worker_path %>
+    <br>
+    <%= link_to "See shifts", shifts_path %>
+
+  </div>
+</div>
