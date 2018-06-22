@@ -1,5 +1,5 @@
 <%= simple_form_for(@shift) do |f| %>
   <%= f.input :date %>
-  <%= f.association :worker, :as => :check_boxes %>
+  <%= f.association :worker%>
   <%= f.button :submit, "Valider", class: "btn btn-primary"  %>
 <% end %>

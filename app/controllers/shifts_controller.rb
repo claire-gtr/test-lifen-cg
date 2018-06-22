@@ -9,7 +9,6 @@ class ShiftsController < ApplicationController
 
   def create
     @shift = Shift.new(shift_params)
-    raise
     if @shift.save
       redirect_to shifts_path
     else

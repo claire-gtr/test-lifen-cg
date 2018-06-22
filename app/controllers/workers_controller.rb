@@ -10,7 +10,7 @@ class WorkersController < ApplicationController
   def create
     @worker = Worker.new(worker_params)
     if @worker.save
-      redirect_to workers_path
+      redirect_to root_path
     else
       render "workers/new"
     end
@@ -23,7 +23,7 @@ class WorkersController < ApplicationController
   def update
     @worker = Worker.find(params[:id])
     @worker.update(worker_params)
-    redirect_to workers_path
+    redirect_to root_path
   end
 
   private
