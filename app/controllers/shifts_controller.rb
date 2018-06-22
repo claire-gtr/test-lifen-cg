@@ -14,7 +14,16 @@ class ShiftsController < ApplicationController
     else
       render "shifts/new"
     end
+  end
 
+  def edit
+    @shift = Shift.find(params[:id])
+  end
+
+  def update
+    @shift = Shift.find(params[:id])
+    @shift.update(shift_params)
+    redirect_to shifts_path
   end
 
   def shift_params

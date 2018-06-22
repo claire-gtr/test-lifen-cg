@@ -1,15 +1,19 @@
 <div class="container">
   <div class="row">
-    <h3>Shifts list</h3>
+    <h3> <strong> SHIFTS </strong> </h3>
     <% @shifts.each do |shift| %>
-     <p> <%= shift.date.strftime("%A, %B %e %Y") %> </p>
-     <p> <%= shift.worker.name %> </p>
-     <br> <br>
+      <div class="card">
+        <p> <%= shift.date.strftime("%A, %B %e %Y") %> </p>
+        <p> <%= shift.worker.name %> </p>
+        <%= link_to "Edit this shift", edit_shift_path(shift) %>
+      </div>
     <% end %>
 
-    <%= link_to "Add a shift", new_shift_path %>
-    <br><br>
-    <%= link_to "Back to all workers", root_path %>
+    <div class="card">
+      <%= link_to "Add a shift", new_shift_path, class: "btn btn-success" %>
+      <br><br>
+      <%= link_to "Back to all workers", root_path, class: "btn btn-danger" %>
+    </div>
 
   </div>
 </div>

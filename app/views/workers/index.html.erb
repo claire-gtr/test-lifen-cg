@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h3>WORKERS LIST</h3>
+    <h3> <strong> WORKERS LIST </strong></h3>
     <% @workers.each do |worker| %>
       <div class="card">
       <p> <%= worker.name %> </p>
@@ -9,9 +9,9 @@
     <% end %>
 
     <div class="card">
-      <%= link_to "Add a worker", new_worker_path %>
-      <br>
-      <%= link_to "See shifts", shifts_path %>
+      <%= link_to "Add a worker", new_worker_path, class: "btn btn-success" %>
+      <br> <br>
+      <%= link_to "See shifts", shifts_path, class: "btn btn-warning" %>
     </div>
   </div>
 </div>
