@@ -3,8 +3,8 @@
     <h3> <strong> SHIFTS </strong> </h3>
     <% @shifts.each do |shift| %>
       <div class="card">
-        <p> <%= shift.date.strftime("%A, %B %e %Y") %> </p>
-        <p> <%= shift.worker.name %> </p>
+        <p> <strong>Date</strong> <%= shift.date.strftime("%A, %B %e %Y") %>  </p>
+        <p> <strong>On duty</strong> <%= shift.worker.name %> </p>
         <%= link_to "Edit this shift", edit_shift_path(shift) %>
       </div>
     <% end %>
