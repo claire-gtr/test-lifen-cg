@@ -2,12 +2,14 @@
   <div class="row">
     <h3>Shifts list</h3>
     <% @shifts.each do |shift| %>
-     <p> <%= shift.date %> </p>
+     <p> <%= shift.date.strftime("%A, %B %e %Y") %> </p>
      <p> <%= shift.worker.name %> </p>
      <br> <br>
     <% end %>
 
     <%= link_to "Add a shift", new_shift_path %>
+    <br><br>
+    <%= link_to "Back to all workers", root_path %>
 
   </div>
 </div>
