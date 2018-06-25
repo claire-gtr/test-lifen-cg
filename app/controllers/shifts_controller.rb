@@ -1,6 +1,7 @@
 class ShiftsController < ApplicationController
   def index
     @shifts = Shift.all
+    @shifts_sorted = @shifts.sort_by {|h| h[:date]}
   end
 
   def new

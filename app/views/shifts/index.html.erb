@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <h3> <strong> SHIFTS </strong> </h3>
-    <% @shifts.each do |shift| %>
+    <% @shifts_sorted.each do |shift| %>
       <div class="card">
         <p> <strong>Date</strong> <%= shift.date.strftime("%A, %B %e %Y") %>  </p>
         <p> <strong>On duty</strong> <%= shift.worker.name %> </p>
